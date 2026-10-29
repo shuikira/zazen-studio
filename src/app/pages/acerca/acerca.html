@@ -1,0 +1,32 @@
+<div class="recorrido">
+  <section class="bloque presentacion">
+    <h1 reveal>{{ autora.nombre }}</h1>
+    <p class="titulo" reveal style="--d: 0.5s">{{ autora.titulo }}</p>
+    <p reveal style="--d: 1s">
+      Estudio desarrollo de videojuegos y realidad virtual. Soy de Jaén, y para mí el diseño es una forma de
+      expresarme.
+    </p>
+  </section>
+
+  <section class="bloque">
+    <h2 reveal>Lo hago todo</h2>
+    <p reveal>
+      Me encargo de todas las partes de mis juegos: el arte, el diseño y la programación. Trabajo con Unity y
+      Krita, y con lo que haga falta en cada momento.
+    </p>
+  </section>
+
+  <section class="bloque">
+    <h2 reveal>Por qué Zazen</h2>
+    <p reveal>
+      Zazen es la palabra que define la meditación sentada. Con mis juegos quiero que quien juega llegue a esa
+      misma calma.
+    </p>
+  </section>
+
+  <section class="bloque contacto">
+    <img reveal src="logo.png" alt="Daruma, logo de {{ estudio }}" width="110" height="134" />
+    <h2 reveal>Escríbeme</h2>
+    <a reveal class="boton" [href]="'mailto:' + email">{{ email }}</a>
+  </section>
+</div>

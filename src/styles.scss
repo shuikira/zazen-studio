@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Zazen';
+  src: url('./fonts/Zazen-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --rojo: #e5291a;
+  --sello: #b80000;
+  --amarillo: #ffc400;
+  --papel: #fff8f0;
+  --tinta: #1d1a17;
+  --titulo: 'Zazen', 'Segoe UI', sans-serif;
+  --texto: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+h1, h2 { font-family: var(--titulo); font-weight: normal; line-height: 1.1; }
+img { max-width: 100%; height: auto; }
+a { color: var(--sello); }
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 3px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  background: var(--tinta);
+  color: var(--papel);
+  font-family: var(--titulo);
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: background 0.4s ease, color 0.4s ease;
+
+  &:hover { background: var(--amarillo); color: var(--tinta); }
+}
+
+/* Aparición suave al hacer scroll (solo opacidad, lenta) */
+.reveal {
+  opacity: 0;
+  transition: opacity 1.6s ease;
+  transition-delay: var(--d, 0s);
+
+  &.visible { opacity: 1; }
+}
+
+/* Transición suave entre páginas */
+::view-transition-old(root) { animation: 0.5s ease both salir; }
+::view-transition-new(root) { animation: 0.9s ease both entrar; }
+
+@keyframes salir { to { opacity: 0; } }
+@keyframes entrar { from { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transition: none; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}

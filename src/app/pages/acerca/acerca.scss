@@ -1,0 +1,50 @@
+.recorrido {
+  position: relative;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 0 3rem;
+
+  /* El hilo rojo que guía la lectura */
+  &::before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(var(--rojo) 85%, transparent);
+  }
+}
+
+.bloque {
+  min-height: 80svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 40rem;
+  padding: 5rem 0;
+
+  h2 { margin: 0 0 1rem; font-size: clamp(2rem, 6vw, 3rem); color: var(--sello); }
+  p { margin: 0 0 1.2rem; }
+}
+
+.presentacion {
+  min-height: 100svh;
+  padding-top: 8rem;
+
+  h1 { margin: 0; font-size: clamp(3rem, 10vw, 6rem); color: var(--rojo); }
+  .titulo { font-size: 1.5rem; font-style: italic; margin-bottom: 2rem; }
+}
+
+.contacto {
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-height: 70svh;
+
+  img { margin-bottom: 1rem; }
+  .boton { align-self: flex-start; font-family: var(--texto); font-size: 1.05rem; }
+}
+
+@media (max-width: 520px) {
+  .recorrido { padding-left: 2rem; &::before { left: 0.7rem; } }
+}
