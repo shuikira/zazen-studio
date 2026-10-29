@@ -12,8 +12,41 @@
   @for (f of frases; track f; let i = $index) {
     <p reveal [style.--d]="i * 0.6 + 's'">{{ f }}</p>
   }
+</section>
 
-  <div class="final" reveal style="--d: 1.8s">
+<section class="lectura">
+  <div reveal>
+    <h2>Escuchar también es avanzar</h2>
+    <p>
+      {{ juego.nombre }} es una aventura de plataformas en 2D que no te pide correr, sino prestar atención. Cada
+      salto, cada pausa y cada paso cuentan, y el mundo responde a lo que haces.
+    </p>
+    <p>
+      Aislarse puede ser un refugio o una cárcel. Cuando el silencio se vuelve tan grande que tapa el mundo, deja
+      de ser calma y se convierte en un muro. El monje tendrá que descubrir en qué momento cruzó esa línea, y
+      cómo se vuelve.
+    </p>
+    <p>No hay prisa. Aquí no se gana por ser rápido, sino por estar presente.</p>
+  </div>
+</section>
+
+<section class="lectura ojo">
+  <div reveal>
+    <h2>Un ojo abierto y otro por abrir</h2>
+    <p>
+      El daruma de nuestro logo tiene un ojo pintado y el otro en blanco. Según la tradición japonesa, el primer
+      ojo se pinta al fijarse una meta, y el segundo, al cumplirla.
+    </p>
+    <p>
+      Así empieza el viaje del monje, con una mirada ya despierta y otra que todavía espera. Y como el propio
+      daruma, que siempre vuelve a levantarse por muchas veces que lo tumben, él también aprenderá a ponerse en
+      pie.
+    </p>
+  </div>
+</section>
+
+<section class="cierre">
+  <div reveal>
     <p>{{ juego.generos }}. Un juego para jugar en calma.</p>
     <a class="boton" routerLink="/acerca">Conoce el estudio</a>
   </div>

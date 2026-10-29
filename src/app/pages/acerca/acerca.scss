@@ -17,20 +17,28 @@
 }
 
 .bloque {
-  min-height: 80svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 40rem;
-  padding: 5rem 0;
+  padding: 2.5rem 0;
 
   h2 { margin: 0 0 1rem; font-size: clamp(2rem, 6vw, 3rem); color: var(--sello); }
   p { margin: 0 0 1.2rem; }
 }
 
+.cita {
+  max-width: 34rem;
+  margin: 0.5rem 0;
+  font-size: clamp(1.7rem, 5vw, 2.5rem);
+  font-style: italic;
+  line-height: 1.3;
+  color: var(--rojo);
+}
+
 .presentacion {
-  min-height: 100svh;
-  padding-top: 8rem;
+  min-height: 70svh;
+  padding-top: 7rem;
 
   h1 { margin: 0; font-size: clamp(3rem, 10vw, 6rem); color: var(--rojo); }
   .titulo { font-size: 1.5rem; font-style: italic; margin-bottom: 2rem; }
@@ -39,7 +47,6 @@
 .contacto {
   align-items: flex-start;
   gap: 0.5rem;
-  min-height: 70svh;
 
   img { margin-bottom: 1rem; }
   .boton { align-self: flex-start; font-family: var(--texto); font-size: 1.05rem; }

@@ -3,7 +3,7 @@ export const ESTUDIO = 'Zazen Studio';
 export const EMAIL = 'zazenstudio.team@gmail.com';
 
 export const JUEGO = {
-  nombre: 'Mokusō', // TÍTULO PROVISIONAL
+  nombre: 'Mokuso', // TÍTULO PROVISIONAL
   logline:
     'Un monje en voto de silencio recupera poco a poco la escucha del mundo en una aventura de plataformas 2D.',
   generos: 'Aventura y plataformas en 2D',

@@ -7,7 +7,7 @@
   justify-content: center;
   padding: 6rem 1.5rem 5rem;
   overflow: hidden;
-  background: var(--rojo);
+  background: var(--tinta);
   color: var(--papel);
   text-align: center;
 
@@ -25,7 +25,7 @@
     top: 40%;
     width: min(640px, 110vw);
     aspect-ratio: 1;
-    border: 2px solid var(--papel);
+    border: 2px solid var(--amarillo);
     border-radius: 50%;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.3);
@@ -93,11 +93,33 @@ h1 {
   }
 }
 
-.final {
-  padding-top: 2rem;
-  border-top: 3px solid var(--rojo);
+.lectura {
+  max-width: 40rem;
+  margin: 0 0 6rem 8vw;
+  padding: 0 1.5rem;
 
-  p { font-size: 1.15rem; margin-bottom: 1.5rem; max-width: none; }
+  h2 { margin: 0 0 1.5rem; font-size: clamp(2rem, 6vw, 3rem); color: var(--sello); }
+  p { margin: 0 0 1.4rem; max-width: none; font-size: 1.15rem; }
+}
+
+.ojo {
+  margin: 0 8vw 6rem auto;
+  padding-left: 2rem;
+  border-left: 3px solid var(--rojo);
+}
+
+.cierre {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 7rem;
+  text-align: center;
+
+  p { margin-bottom: 1.5rem; font-size: 1.15rem; max-width: none; }
+}
+
+@media (max-width: 700px) {
+  .lectura { margin-left: 0; }
+  .ojo { margin: 0 0 6rem; padding-left: 1.5rem; }
 }
 
 @keyframes despertar { to { opacity: 1; } }
